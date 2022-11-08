@@ -98,9 +98,9 @@ KDLRobotModel::KDLRobotModel(string robot_desciption_param, string planning_scen
 
     
     //Get the tip link 
-    boost::shared_ptr<const urdf::Link> link;
+    std::shared_ptr<const urdf::Link> link;
     //Joint from the urdf
-    boost::shared_ptr<const urdf::Joint> joint;
+    std::shared_ptr<const urdf::Joint> joint;
 
 
     //Find the base and tip link of the kinematic chain

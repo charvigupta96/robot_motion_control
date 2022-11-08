@@ -25,7 +25,7 @@ RobotController::RobotController(string robot_desciption_param, string kinematic
 
     //Create planning scene monitor
     //psm_ = boost::shared_ptr<planning_scene_monitor::PlanningSceneMonitor>(new planning_scene_monitor::PlanningSceneMonitor(robot_desciption_param));
-    psm_ =  boost::make_shared<planning_scene_monitor::PlanningSceneMonitor>(robot_desciption_param);
+    psm_ =  std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(robot_desciption_param);
 
     //Get topic prefix in constructor argument list -> to set topic names e.g. "robotino_group/planning_scene"
     string planning_scene_ns = ns_prefix + "planning_scene";
@@ -210,7 +210,7 @@ RobotController::RobotController(boost::shared_ptr<kuka_motion_controller::KDLRo
 
     //Create planning scene monitor
     //psm_ = boost::shared_ptr<planning_scene_monitor::PlanningSceneMonitor>(new planning_scene_monitor::PlanningSceneMonitor(robot_desciption_param));
-    psm_ =  boost::make_shared<planning_scene_monitor::PlanningSceneMonitor>(robot_desciption_param);
+    psm_ =  std::make_shared<planning_scene_monitor::PlanningSceneMonitor>(robot_desciption_param);
 
     //Get topic prefix in constructor argument list -> to set topic names e.g. "robotino_group/planning_scene"
     string planning_scene_ns = ns_prefix + "planning_scene";
